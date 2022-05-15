@@ -1,6 +1,19 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+
+const SERVICE_ID = 'service_nz746jv';
+const TEMPLATE_ID = 'template_8lf95ps';
+const PUBLIC_KEY = 'OY47pSEhckBwSInLH';
 
 export const ContactForm = () => {
+  const form = useRef();
+
+  const handleOnSubmit = (e) => {
+    e.preventDefault();
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY);
+    form.current.reset();
+  };
+
   return (
     <div>
       <section class="bg-gray-100">
@@ -26,7 +39,7 @@ export const ContactForm = () => {
             </div>
 
             <div class="p-8 bg-white rounded-lg shadow-lg lg:p-12 lg:col-span-3">
-              <form action="" class="space-y-4">
+              <form ref={form} onSubmit={handleOnSubmit} class="space-y-4">
                 <div>
                   <label class="sr-only" for="name">
                     Name
@@ -36,6 +49,7 @@ export const ContactForm = () => {
                     placeholder="Name"
                     type="text"
                     id="name"
+                    name="name"
                   />
                 </div>
 
@@ -49,6 +63,7 @@ export const ContactForm = () => {
                       placeholder="Email address"
                       type="email"
                       id="email"
+                      name="email"
                     />
                   </div>
 
@@ -61,57 +76,8 @@ export const ContactForm = () => {
                       placeholder="Phone Number"
                       type="tel"
                       id="phone"
+                      name="phone"
                     />
-                  </div>
-                </div>
-
-                <div class="grid grid-cols-1 gap-4 text-center sm:grid-cols-3">
-                  <div>
-                    <input
-                      class="sr-only"
-                      id="option1"
-                      type="radio"
-                      tabindex="-1"
-                    />
-                    <label
-                      for="option1"
-                      class="block w-full p-3 border border-gray-200 rounded-lg"
-                      tabindex="0"
-                    >
-                      <span class="text-sm font-medium"> Option 1 </span>
-                    </label>
-                  </div>
-
-                  <div>
-                    <input
-                      class="sr-only"
-                      id="option2"
-                      type="radio"
-                      tabindex="-1"
-                    />
-                    <label
-                      for="option2"
-                      class="block w-full p-3 border border-gray-200 rounded-lg"
-                      tabindex="0"
-                    >
-                      <span class="text-sm font-medium"> Option 2 </span>
-                    </label>
-                  </div>
-
-                  <div>
-                    <input
-                      class="sr-only"
-                      id="option3"
-                      type="radio"
-                      tabindex="-1"
-                    />
-                    <label
-                      for="option3"
-                      class="block w-full p-3 border border-gray-200 rounded-lg"
-                      tabindex="0"
-                    >
-                      <span class="text-sm font-medium"> Option 3 </span>
-                    </label>
                   </div>
                 </div>
 
@@ -124,6 +90,7 @@ export const ContactForm = () => {
                     placeholder="Message"
                     rows="8"
                     id="message"
+                    name="message"
                   ></textarea>
                 </div>
 
