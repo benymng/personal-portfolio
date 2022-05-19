@@ -10,15 +10,9 @@ import Blogs from './pages/Blogs';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import TestimonialsPage from './pages/TestimonialsPage';
+import { AddBlog } from './pages/AddBlog';
 
 function App() {
-  const [articles, setArticles] = useState([]);
-  fetch('https://backendtesting1234.herokuapp.com/api/articles')
-    .then((res) => res.json())
-    .then((json) => {
-      setArticles(json);
-    });
-
   return (
     <div>
       <Navigation />
@@ -28,19 +22,10 @@ function App() {
           <Route path="/blogs" element={<Blogs />} />
           <Route path="contact" element={<Contact />} />
           <Route path="testimonials" element={<TestimonialsPage />} />
+          <Route path="add-blog" element={<AddBlog />} />
         </Routes>
       </Router>
       <Footer />
-      {/* <h1 className="font-bold underline">Article Titles</h1> */}
-      {/* <ol>
-        {articles.map((article) => (
-          <li key={article.id}>{article.description}</li>
-        ))}
-      </ol>
-      <PostForm /> */}
-      {/* <Navigation />
-      <Banner />
-      <Contact /> */}
     </div>
   );
 }

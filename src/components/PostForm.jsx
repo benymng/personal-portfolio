@@ -6,6 +6,7 @@ export const PostForm = () => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [markdown, setMarkdown] = useState('');
+  const [imageURL, setimageURL] = useState('');
 
   let handleSubmit = async (e) => {
     e.preventDefault();
@@ -15,6 +16,7 @@ export const PostForm = () => {
       markdown: markdown,
       slug: 'sadfasjdlf',
       sanitizedHtml: 'asldfjaskdlfjaksdjf',
+      imageUrl: imageURL,
     });
     console.log(newArticle);
     const requestOptions = {
@@ -90,6 +92,15 @@ export const PostForm = () => {
             name="markdown"
             value={markdown}
             onChange={(e) => setMarkdown(e.target.value)}
+          />
+        </div>
+        <div>
+          <label>Image URL</label>
+          <input
+            type="text"
+            name="imageUrl"
+            value={imageURL}
+            onChange={(e) => setimageURL(e.target.value)}
           />
         </div>
         <button type="submit">Create</button>

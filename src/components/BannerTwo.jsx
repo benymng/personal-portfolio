@@ -1,5 +1,6 @@
 import React from 'react';
-import forest from './test.jpeg';
+import forest from '../assets/test2.jpg';
+import test3 from '../assets/test4.jpg';
 
 export const BannerTwo = () => {
   return (
@@ -7,7 +8,7 @@ export const BannerTwo = () => {
       <section class="relative bg-white">
         <img
           class="absolute inset-0 object-[75%] sm:object-[25%] object-cover w-full h-full opacity-25 sm:opacity-100"
-          src={forest}
+          src={test3}
           alt="Couple on a bed with a dog"
         />
 
@@ -16,9 +17,9 @@ export const BannerTwo = () => {
         <div class="relative max-w-screen-xl px-4 py-32 mx-auto lg:h-screen lg:items-center lg:flex">
           <div class="max-w-xl text-center sm:text-left">
             <h1 class="text-3xl font-extrabold sm:text-5xl">
-              Let us find your
+              Infusion Energy
               <strong class="font-extrabold text-rose-700 sm:block">
-                Forever Home.
+                Fuels From CO2
               </strong>
             </h1>
 
