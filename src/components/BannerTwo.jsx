@@ -18,6 +18,7 @@ export const BannerTwo = () => {
           <div class="max-w-xl text-center sm:text-left">
             <h1 class="text-3xl font-extrabold sm:text-5xl">
               Infusion Energy
+              <br></br>
               <strong class="font-extrabold text-rose-700 sm:block">
                 Fuels From CO2
               </strong>

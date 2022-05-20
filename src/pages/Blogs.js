@@ -1,14 +1,19 @@
 import React from 'react';
 import { BlogCard } from '../components/BlogCard';
 import { useState } from 'react';
+import { useEffect } from 'react';
 
 const Blogs = () => {
   const [articles, setArticles] = useState([]);
-  fetch('https://backendtesting1234.herokuapp.com/api/articles')
-    .then((res) => res.json())
-    .then((json) => {
-      setArticles(json);
-    });
+  // when the second component is an empty that means that the fetch happens when you click the blog button
+  // if you want to refetch with a button you should create a function that you can use onclick and useEffect
+  useEffect(() => {
+    fetch('https://backendtesting1234.herokuapp.com/api/articles')
+      .then((res) => res.json())
+      .then((json) => {
+        setArticles(json);
+      });
+  }, []);
   return (
     <div>
       <div class="max-w-screen-xl px-4 py-16 mx-auto lg:items-center lg:flex">
