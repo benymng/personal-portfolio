@@ -4,11 +4,12 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 
 const Blogs = () => {
+  const serverLink = 'https://backendtesting1234.herokuapp.com/api/articles';
   const [articles, setArticles] = useState([]);
   // when the second component is an empty that means that the fetch happens when you click the blog button
   // if you want to refetch with a button you should create a function that you can use onclick and useEffect
   useEffect(() => {
-    fetch('https://backendtesting1234.herokuapp.com/api/articles')
+    fetch(serverLink)
       .then((res) => res.json())
       .then((json) => {
         setArticles(json);
