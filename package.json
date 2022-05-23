@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^13.5.0",
     "buffer": "^6.0.3",
     "emailjs": "^4.0.0",
+    "html-react-parser": "^1.4.12",
     "http": "^0.0.1-security",
     "https": "^1.0.0",
     "net": "^1.0.2",

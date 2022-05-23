@@ -99,7 +99,7 @@ export const PostForm = () => {
           <input
             type="text"
             name="imageUrl"
-            value={imageURL}
+            value={'https://source.unsplash.com/' + imageURL}
             onChange={(e) => setimageURL(e.target.value)}
           />
         </div>

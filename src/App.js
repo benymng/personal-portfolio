@@ -11,6 +11,8 @@ import Home from './pages/Home';
 import Contact from './pages/Contact';
 import TestimonialsPage from './pages/TestimonialsPage';
 import { AddBlog } from './pages/AddBlog';
+import { BlogPage } from './components/BlogPage';
+import { PageNotFound } from './pages/PageNotFound';
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
           <Route path="contact" element={<Contact />} />
           <Route path="testimonials" element={<TestimonialsPage />} />
           <Route path="add-blog" element={<AddBlog />} />
+          <Route path="/blogs/:slug" element={<BlogPage />} />
+          <Route path="/404" element={<PageNotFound />} />
         </Routes>
       </Router>
       <Footer />

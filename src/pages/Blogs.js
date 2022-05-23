@@ -25,6 +25,7 @@ const Blogs = () => {
                 description={article.description}
                 image={article.imageUrl}
                 date={article.createdAt}
+                href={article.slug}
               />
             ))}
           </div>

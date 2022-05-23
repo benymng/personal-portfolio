@@ -3,7 +3,10 @@ import React from 'react';
 export const BlogCard = (props) => {
   return (
     <div>
-      <a href="" class="block overflow-hidden rounded-2xl">
+      <a
+        href={'http://localhost:3000/blogs/' + props.href}
+        class="block overflow-hidden rounded-2xl"
+      >
         <img class="object-cover w-full h-56" src={props.image} alt="" />
 
         <div class="p-4 bg-gray-900">
