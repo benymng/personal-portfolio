@@ -24,8 +24,11 @@ export const BlogPage = () => {
   }
 
   return (
-    <div>
-      {parse(data.sanitizedHtml)}
+    <div class="flex justify-center h-auto w-full">
+      <div
+        class="lg:shadow-lg lg:w-1/3 lg:rounded sm:w-full lg:px-10 lg:py-10 my-10 mx-10 space-y-4"
+        dangerouslySetInnerHTML={{ __html: data.sanitizedHtml }}
+      ></div>
       {/* <h1>Test</h1> */}
     </div>
   );
