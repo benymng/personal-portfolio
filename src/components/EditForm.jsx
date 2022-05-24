@@ -2,43 +2,22 @@ import React from 'react';
 import { useState } from 'react';
 // const newFetch = require('node-fetch');
 
-export const PostForm = () => {
+export const EditForm = () => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [markdown, setMarkdown] = useState('');
   const [imageURL, setimageURL] = useState('');
+  const [data, setData] = usestate('');
 
-  let handleSubmit = async (e) => {
-    e.preventDefault();
-    let newArticle = JSON.stringify({
-      title: title,
-      description: description,
-      markdown: markdown,
-      slug: 'sadfasjdlf',
-      sanitizedHtml: 'asldfjaskdlfjaksdjf',
-      imageUrl: imageURL,
-    });
-    console.log(newArticle);
-    const requestOptions = {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: newArticle,
-    };
-    let res = await fetch(
-      'https://backendtesting1234.herokuapp.com/api/',
-      requestOptions
-    );
-    if (res.status === 200) {
-    }
+  useEffect(() => {
+    fetch(serverLink)
+      .then((res) => res.json())
+      .then((json) => {
+        setArticles(json);
+      });
+  }, []);
 
-    //reset form
-    setTitle('');
-    setDescription('');
-    setMarkdown('');
-    setimageURL('');
-    console.log('success');
-  };
-
+  let handleSubmit = async (e) => {};
   return (
     <div>
       <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">

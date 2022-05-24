@@ -13,6 +13,7 @@ import TestimonialsPage from './pages/TestimonialsPage';
 import { AddBlog } from './pages/AddBlog';
 import { BlogPage } from './components/BlogPage';
 import { PageNotFound } from './pages/PageNotFound';
+import { DeletePage } from './pages/DeletePage';
 
 function App() {
   return (
@@ -24,9 +25,10 @@ function App() {
           <Route path="/blogs" element={<Blogs />} />
           <Route path="contact" element={<Contact />} />
           <Route path="testimonials" element={<TestimonialsPage />} />
-          <Route path="add-blog" element={<AddBlog />} />
+          <Route path="add-new-article" element={<AddBlog />} />
           <Route path="/blogs/:slug" element={<BlogPage />} />
           <Route path="/404" element={<PageNotFound />} />
+          <Route path="/delete/:slug" element={<DeletePage />} />
         </Routes>
       </Router>
       <Footer />
