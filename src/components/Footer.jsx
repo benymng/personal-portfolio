@@ -186,9 +186,12 @@ export const Footer = () => {
                     {' '}
                     FAQs{' '}
                   </a>
-                  <a class="hover:opacity-75" href="">
+                  <a
+                    class="hover:opacity-75"
+                    href="https://628c2a209f6a9c000aed16b9--symphonious-hotteok-b5ab23.netlify.app/add-blog"
+                  >
                     {' '}
-                    Live Chat{' '}
+                    Add New Article{' '}
                   </a>
                 </nav>
               </div>
