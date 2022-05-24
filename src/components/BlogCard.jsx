@@ -1,7 +1,8 @@
 import React from 'react';
 
 export const BlogCard = (props) => {
-  const startingLink = 'http://localhost:3000/blogs/';
+  const startingLink =
+    'https://628c2a209f6a9c000aed16b9--symphonious-hotteok-b5ab23.netlify.app/blogs/';
   return (
     <div>
       <a
