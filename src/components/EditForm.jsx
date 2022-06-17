@@ -1,23 +1,69 @@
-import React from 'react';
-import { useState } from 'react';
-// const newFetch = require('node-fetch');
+import React from "react";
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
-export const EditForm = () => {
-  const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
-  const [markdown, setMarkdown] = useState('');
-  const [imageURL, setimageURL] = useState('');
-  const [data, setData] = usestate('');
+export const EditForm = (props) => {
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [markdown, setMarkdown] = useState("");
+  const [imageURL, setimageURL] = useState("");
+  const [isLoading, setLoading] = useState(true);
+  const [data, setData] = useState("");
+
+  const { slug } = useParams();
 
   useEffect(() => {
-    fetch(serverLink)
-      .then((res) => res.json())
-      .then((json) => {
-        setArticles(json);
-      });
+    const fetchData = async () => {
+      const data = await fetch(
+        `https://backendtesting1234.herokuapp.com/api/${slug}`
+      )
+        .then((res) => res.json())
+        .then((json) => setData(json));
+      setLoading(false);
+    };
+    fetchData().catch(console.error);
+
+    setTitle(data.title);
+    console.log(title)
+    setDescription(data.description);
+    setMarkdown(data.markdown);
+    setimageURL(data.imageUrl);
+
   }, []);
 
-  let handleSubmit = async (e) => {};
+  // renders this until the useEffect has finished
+  if (isLoading) {
+    return <div> Loading ... </div>;
+  }
+
+  let handleSubmit = async (e) => {
+    e.preventDefault();
+    let updatedArticle = JSON.stringify({
+      title: title,
+      description: description,
+      markdown: markdown,
+      imageUrl: imageURL,
+    });
+    console.log("updated article: ");
+    console.log(updatedArticle);
+    const requestOptions = {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: updatedArticle,
+    };
+    fetch(`http://localhost:3000/api/edit/${slug}`, requestOptions)
+    .catch(error => {
+        console.error('There was an error!', error);
+    });
+
+    //reset form
+    setTitle("");
+    setDescription("");
+    setMarkdown("");
+    setimageURL("");
+    console.log("success");
+  };
+
   return (
     <div>
       <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
@@ -26,7 +72,7 @@ export const EditForm = () => {
             onSubmit={handleSubmit}
             class="p-8 mt-6 mb-0 space-y-4 rounded-lg shadow-2xl"
           >
-            <p class="text-lg font-medium">Add New Article</p>
+            <p class="text-lg font-medium">Edit Article</p>
 
             <div>
               <div class="relative mt-1">
@@ -35,7 +81,8 @@ export const EditForm = () => {
                   id="title"
                   class="w-full p-4 pr-12 text-sm border-gray-200 rounded-lg shadow-sm"
                   placeholder="Title"
-                  value={title}
+                  // value={title}
+                  defaultValue={data.title}
                   onChange={(e) => setTitle(e.target.value)}
                 />
 
@@ -57,7 +104,8 @@ export const EditForm = () => {
                   id="description"
                   class="w-full p-4 pr-12 text-sm border-gray-200 rounded-lg shadow-sm"
                   placeholder="Description"
-                  value={description}
+                  // value={description}
+                  defaultValue={data.description}
                   onChange={(e) => setDescription(e.target.value)}
                 />
 
@@ -85,7 +133,8 @@ export const EditForm = () => {
                   id="Markdown"
                   class="w-full p-4 pr-12 h-96 text-sm border-gray-200 rounded-lg shadow-sm"
                   placeholder="Markdown"
-                  value={markdown}
+                  // value={markdown}
+                  defaultValue={data.markdown}
                   onChange={(e) => setMarkdown(e.target.value)}
                 />
 
@@ -107,7 +156,8 @@ export const EditForm = () => {
                   id="imageUrl"
                   class="w-full p-4 pr-12 text-sm border-gray-200 rounded-lg shadow-sm"
                   placeholder="Image URL (https://source.unsplash.com/...)"
-                  value={imageURL}
+                  // value={imageURL}
+                  defaultValue={data.imageUrl}
                   onChange={(e) => setimageURL(e.target.value)}
                 />
 
@@ -131,45 +181,6 @@ export const EditForm = () => {
           </form>
         </div>
       </div>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Title</label>
-          <input
-            type="text"
-            name="title"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-          />
-        </div>
-        <div>
-          <label>Description</label>
-          <input
-            type="text"
-            name="description"
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-          />
-        </div>
-        <div>
-          <label>Markdown</label>
-          <textarea
-            type="text"
-            name="markdown"
-            value={markdown}
-            onChange={(e) => setMarkdown(e.target.value)}
-          />
-        </div>
-        <div>
-          <label>Image URL</label>
-          <input
-            type="text"
-            name="imageUrl"
-            value={'https://source.unsplash.com/' + imageURL}
-            onChange={(e) => setimageURL(e.target.value)}
-          />
-        </div>
-        <button type="submit">Create</button>
-      </form>
     </div>
   );
 };
