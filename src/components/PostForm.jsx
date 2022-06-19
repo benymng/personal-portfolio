@@ -1,12 +1,14 @@
 import React from "react";
 import { useState } from "react";
 // const newFetch = require('node-fetch');
+import { useNavigate } from "react-router-dom";
 
 export const PostForm = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [markdown, setMarkdown] = useState("");
   const [imageURL, setimageURL] = useState("https://source.unsplash.com/");
+  const navigate = useNavigate();
 
   let handleSubmit = async (e) => {
     e.preventDefault();
@@ -35,6 +37,7 @@ export const PostForm = () => {
     setMarkdown("");
     setimageURL("");
     console.log("success");
+    navigate("/blogs");
   };
 
   return (

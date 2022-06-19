@@ -1,13 +1,13 @@
-import React from 'react';
-import forest from '../assets/test2.jpg';
-import test3 from '../assets/test4.jpg';
+import React from "react";
+import forest from "../assets/test2.jpg";
+import test3 from "../assets/test4.jpg";
 
 export const BannerTwo = () => {
   return (
     <div>
       <section class="relative bg-white">
         <img
-          class="absolute inset-0 object-[75%] sm:object-[25%] object-cover w-full h-full opacity-25 sm:opacity-100"
+          class="absolute inset-0 object-[75%] sm:object-[25%] object-cover w-full h-full opacity-25 sm:opacity-100 z-0"
           src={test3}
           alt="Couple on a bed with a dog"
         />

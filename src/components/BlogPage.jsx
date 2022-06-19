@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
-import parse from 'html-react-parser';
+import React, { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import parse from "html-react-parser";
 
 export const BlogPage = () => {
   const { slug } = useParams();
@@ -9,9 +9,9 @@ export const BlogPage = () => {
   const navigate = useNavigate();
 
   const navigateToEdit = () => {
-    let editLink = `/edit/${slug}`
-    navigate(editLink)
-  }
+    let editLink = `/edit/${slug}`;
+    navigate(editLink);
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -30,15 +30,22 @@ export const BlogPage = () => {
   }
 
   return (
-    <div class="flex justify-center h-auto w-full">
-      <div class="my-10">
-        <button onClick={navigateToEdit} class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Edit</button>
+    <div>
+      <div class="my-10 mx-10">
+        <button
+          onClick={navigateToEdit}
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+        >
+          Edit
+        </button>
       </div>
-      <div
-        class="lg:shadow-lg lg:w-1/3 lg:rounded sm:w-full lg:px-10 lg:py-10 my-10 mx-10 space-y-4"
-        dangerouslySetInnerHTML={{ __html: data.sanitizedHtml }}
-      ></div>
-      {/* <h1>Test</h1> */}
+      <div class="flex justify-center h-auto w-full">
+        <div
+          class="lg:shadow-lg lg:w-1/3 lg:rounded sm:w-full lg:px-10 lg:py-10 mx-10 space-y-4 white"
+          dangerouslySetInnerHTML={{ __html: data.sanitizedHtml }}
+        ></div>
+        {/* <h1>Test</h1> */}
+      </div>
     </div>
   );
 };
