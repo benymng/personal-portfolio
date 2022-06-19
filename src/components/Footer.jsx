@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import Logo from "../assets/logo.png";
 
 export const Footer = () => {
   return (
@@ -7,7 +8,7 @@ export const Footer = () => {
         <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
           <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
             <div>
-              <span class="block w-32 h-10 bg-gray-200 rounded-lg"></span>
+              <img src={Logo} alt="infusion logo" class="inline-block h-10" />
 
               <p class="max-w-xs mt-4 text-sm text-gray-500">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -129,20 +130,20 @@ export const Footer = () => {
 
                 <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
                   <a class="hover:opacity-75" href="">
-                    {' '}
-                    About{' '}
+                    {" "}
+                    About{" "}
                   </a>
                   <a class="hover:opacity-75" href="">
-                    {' '}
-                    Meet the Team{' '}
+                    {" "}
+                    Meet the Team{" "}
                   </a>
                   <a class="hover:opacity-75" href="">
-                    {' '}
-                    History{' '}
+                    {" "}
+                    History{" "}
                   </a>
                   <a class="hover:opacity-75" href="">
-                    {' '}
-                    Careers{' '}
+                    {" "}
+                    Careers{" "}
                   </a>
                 </nav>
               </div>
@@ -152,24 +153,24 @@ export const Footer = () => {
 
                 <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
                   <a class="hover:opacity-75" href="">
-                    {' '}
-                    1on1 Coaching{' '}
+                    {" "}
+                    1on1 Coaching{" "}
                   </a>
                   <a class="hover:opacity-75" href="">
-                    {' '}
-                    Company Review{' '}
+                    {" "}
+                    Company Review{" "}
                   </a>
                   <a class="hover:opacity-75" href="">
-                    {' '}
-                    Accounts Review{' '}
+                    {" "}
+                    Accounts Review{" "}
                   </a>
                   <a class="hover:opacity-75" href="">
-                    {' '}
-                    HR Consulting{' '}
+                    {" "}
+                    HR Consulting{" "}
                   </a>
                   <a class="hover:opacity-75" href="">
-                    {' '}
-                    SEO Optimisation{' '}
+                    {" "}
+                    SEO Optimisation{" "}
                   </a>
                 </nav>
               </div>
@@ -179,19 +180,16 @@ export const Footer = () => {
 
                 <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
                   <a class="hover:opacity-75" href="">
-                    {' '}
-                    Contact{' '}
+                    {" "}
+                    Contact{" "}
                   </a>
                   <a class="hover:opacity-75" href="">
-                    {' '}
-                    FAQs{' '}
+                    {" "}
+                    FAQs{" "}
                   </a>
-                  <a
-                    class="hover:opacity-75"
-                    href="/add-blog"
-                  >
-                    {' '}
-                    Add New Article{' '}
+                  <a class="hover:opacity-75" href="/add-blog">
+                    {" "}
+                    Add New Article{" "}
                   </a>
                 </nav>
               </div>
@@ -201,20 +199,20 @@ export const Footer = () => {
 
                 <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
                   <a class="hover:opacity-75" href="">
-                    {' '}
-                    Privacy Policy{' '}
+                    {" "}
+                    Privacy Policy{" "}
                   </a>
                   <a class="hover:opacity-75" href="">
-                    {' '}
-                    Terms & Conditions{' '}
+                    {" "}
+                    Terms & Conditions{" "}
                   </a>
                   <a class="hover:opacity-75" href="">
-                    {' '}
-                    Returns Policy{' '}
+                    {" "}
+                    Returns Policy{" "}
                   </a>
                   <a class="hover:opacity-75" href="">
-                    {' '}
-                    Accessibility{' '}
+                    {" "}
+                    Accessibility{" "}
                   </a>
                 </nav>
               </div>

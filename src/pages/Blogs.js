@@ -1,10 +1,11 @@
-import React from 'react';
-import { BlogCard } from '../components/BlogCard';
-import { useState } from 'react';
-import { useEffect } from 'react';
+import React from "react";
+import { BlogCard } from "../components/BlogCard";
+import { useState } from "react";
+import { useEffect } from "react";
 
 const Blogs = () => {
-  const serverLink = 'https://backendtesting1234.herokuapp.com/api/articles';
+  const [isLoading, setLoading] = useState(true);
+  const serverLink = "https://backendtesting1234.herokuapp.com/api/articles";
   const [articles, setArticles] = useState([]);
   // when the second component is an empty that means that the fetch happens when you click the blog button
   // if you want to refetch with a button you should create a function that you can use onclick and useEffect
@@ -14,7 +15,12 @@ const Blogs = () => {
       .then((json) => {
         setArticles(json);
       });
+    setLoading(false);
   }, []);
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <div>
       <div class="max-w-screen-xl px-4 py-16 mx-auto lg:items-center lg:flex">

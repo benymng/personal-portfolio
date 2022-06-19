@@ -1,6 +1,7 @@
 import React from "react";
 
 import Dropdown from "./Dropdown";
+import Logo from "../assets/logo.png";
 
 export const Navigation = () => {
   function myFunction() {
@@ -18,7 +19,10 @@ export const Navigation = () => {
           <div class="flex items-center">
             <Dropdown />
             <a href="/" class="flex ">
-              <span class="inline-block w-32 h-10 bg-gray-200 rounded-lg"></span>
+              <img src={Logo} alt="infusion logo" class="inline-block h-10" />
+              {/* <span class="inline-block w-32 h-10 bg-gray-200 rounded-lg">
+                Infusion
+              </span> */}
             </a>
           </div>
 
