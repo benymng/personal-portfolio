@@ -1,12 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import parse from 'html-react-parser';
 
 export const BlogPage = () => {
   const { slug } = useParams();
   const [data, setData] = useState();
   const [isLoading, setLoading] = useState(true);
-  let editLink = `http://localhost:3001/edit/${slug}`
+  const navigate = useNavigate();
+
+  const navigateToEdit = () => {
+    let editLink = `/edit/${slug}`
+    navigate(editLink)
+  }
 
   useEffect(() => {
     const fetchData = async () => {
@@ -26,7 +31,9 @@ export const BlogPage = () => {
 
   return (
     <div class="flex justify-center h-auto w-full">
-      <a href={editLink}>Edit Article</a>
+      <div class="my-10">
+        <button onClick={navigateToEdit} class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Edit</button>
+      </div>
       <div
         class="lg:shadow-lg lg:w-1/3 lg:rounded sm:w-full lg:px-10 lg:py-10 my-10 mx-10 space-y-4"
         dangerouslySetInnerHTML={{ __html: data.sanitizedHtml }}

@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 export const EditForm = (props) => {
   const [title, setTitle] = useState("");
@@ -9,8 +9,18 @@ export const EditForm = (props) => {
   const [imageURL, setimageURL] = useState("");
   const [isLoading, setLoading] = useState(true);
   const [data, setData] = useState("");
+  const navigate = useNavigate();
 
   const { slug } = useParams();
+
+  // used to turn title into slug so that after edit the user is redirected
+  const slugify = str =>
+    str
+      .toLowerCase()
+      .trim()
+      .replace(/[^\w\s-]/g, '')
+      .replace(/[\s_-]+/g, '-')
+      .replace(/^-+|-+$/g, '');
 
   useEffect(() => {
     const fetchData = async () => {
@@ -51,7 +61,7 @@ export const EditForm = (props) => {
       headers: { "Content-Type": "application/json" },
       body: updatedArticle,
     };
-    fetch(`http://localhost:3000/api/edit/${slug}`, requestOptions)
+    fetch(`https://backendtesting1234.herokuapp.com/api/edit/${slug}`, requestOptions)
     .catch(error => {
         console.error('There was an error!', error);
     });
@@ -62,6 +72,7 @@ export const EditForm = (props) => {
     setMarkdown("");
     setimageURL("");
     console.log("success");
+    navigate(`/blogs/${slugify(title)}`)
   };
 
   return (

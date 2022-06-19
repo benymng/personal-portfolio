@@ -1,12 +1,12 @@
 import React from "react";
 
 export const BlogCard = (props) => {
-  const startingLink =
-    "https://628c2a209f6a9c000aed16b9--symphonious-hotteok-b5ab23.netlify.app/blogs/";
+  const blogLink =
+    `/blogs/${props.href}`
   return (
     <div>
       <a
-        href={startingLink + props.href}
+        href={blogLink}
         class="block overflow-hidden rounded-2xl"
       >
         <img class="object-cover w-full h-56" src={props.image} alt="" />
