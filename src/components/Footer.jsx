@@ -183,9 +183,9 @@ export const Footer = () => {
                     {" "}
                     Contact{" "}
                   </a>
-                  <a class="hover:opacity-75" href="">
+                  <a class="hover:opacity-75" href="/add-testimonial">
                     {" "}
-                    FAQs{" "}
+                    Add Testimonial{" "}
                   </a>
                   <a class="hover:opacity-75" href="/add-blog">
                     {" "}
@@ -219,7 +219,7 @@ export const Footer = () => {
             </div>
           </div>
 
-          <p class="mt-8 text-xs text-gray-500">&copy; 2022 Company Name</p>
+          <p class="mt-8 text-xs text-gray-500">&copy; 2022 Infusion Energy</p>
         </div>
       </footer>
     </div>

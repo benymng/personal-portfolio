@@ -30,27 +30,27 @@ export const Navigation = () => {
             <nav class="hidden lg:uppercase lg:text-font-color lg:tracking-wide lg:font-bold lg:text-xs lg:space-x-4 lg:flex">
               <a
                 href="/about"
-                class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-red-700 hover:border-current"
+                class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-accent-color hover:border-current"
               >
                 About
               </a>
               <a
                 href="/blogs"
-                class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-red-700 hover:border-current"
+                class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-accent-color hover:border-current"
               >
                 Blogs
               </a>
 
               <a
                 href="/testimonials"
-                class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-red-700 hover:border-current"
+                class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-accent-color hover:border-current"
               >
                 Testimonials
               </a>
 
               <a
                 href="/contact"
-                class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-red-700 hover:border-current"
+                class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-accent-color hover:border-current"
               >
                 Contact
               </a>
@@ -61,7 +61,7 @@ export const Navigation = () => {
                 <span>
                   <a
                     href="/cart"
-                    class="block p-6 border-b-4 border-transparent hover:border-red-700"
+                    class="block p-6 border-b-4 border-transparent hover:border-accent-color"
                   >
                     <svg
                       class="w-4 h-4"
@@ -85,7 +85,7 @@ export const Navigation = () => {
                 <span>
                   <a
                     href="/account"
-                    class="block p-6 border-b-4 border-transparent hover:border-red-700"
+                    class="block p-6 border-b-4 border-transparent hover:border-accent-color"
                   >
                     <svg
                       class="w-4 h-4"
@@ -109,7 +109,7 @@ export const Navigation = () => {
                 <span class="hidden sm:block">
                   <a
                     href="/search"
-                    class="block p-6 border-b-4 border-transparent hover:border-red-700"
+                    class="block p-6 border-b-4 border-transparent hover:border-accent-color"
                   >
                     <svg
                       class="w-4 h-4"

@@ -1,16 +1,17 @@
 module.exports = {
-  darkMode: 'class',
+  darkMode: "class",
   content: [
-    './src/**/*.{js,ts,jsx,tsx}',
-    './src/components/**/*.{js,ts,jsx,tsx}',
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
       colors: {
-        'font-color': '#3a394a',
-        'secondary-color': '#87ceeb',
-        'primary-color': '#161616',
-        'accent-color': '#666C61',
+        "font-color": "#3a394a",
+        "secondary-color": "#87ceeb",
+        "primary-color": "#161616",
+        "accent-color": "#3c3c7c",
+        "hover-color": "#2a2a57",
       },
     },
   },

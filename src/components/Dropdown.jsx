@@ -19,7 +19,7 @@ const Dropdown = ({ color }) => {
   // bg colors
   let bgColor;
   color === "white"
-    ? (bgColor = "bg-rose-600")
+    ? (bgColor = "bg-accent-color")
     : (bgColor = "bg-" + color + "-500");
   return (
     <>

@@ -1,79 +1,43 @@
 import React from "react";
-import { useState, useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useState } from "react";
+// const newFetch = require('node-fetch');
+import { useNavigate } from "react-router-dom";
 
-export const EditForm = (props) => {
-  const [title, setTitle] = useState("");
+export const AddTestimonialForm = () => {
+  const [rating, setRating] = useState("");
+  const [header, setHeader] = useState("");
   const [description, setDescription] = useState("");
-  const [markdown, setMarkdown] = useState("");
-  const [imageURL, setimageURL] = useState("");
-  const [isLoading, setLoading] = useState(true);
-  const [data, setData] = useState("");
+  const [name, setName] = useState("");
   const navigate = useNavigate();
-
-  const { slug } = useParams();
-
-  // used to turn title into slug so that after edit the user is redirected
-  const slugify = (str) =>
-    str
-      .toLowerCase()
-      .trim()
-      .replace(/[^\w\s-]/g, "")
-      .replace(/[\s_-]+/g, "-")
-      .replace(/^-+|-+$/g, "");
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const data = await fetch(
-        `https://backendtesting1234.herokuapp.com/api/${slug}`
-      )
-        .then((res) => res.json())
-        .then((json) => setData(json));
-      setLoading(false);
-    };
-    fetchData().catch(console.error);
-
-    setTitle(data.title);
-    console.log(title);
-    setDescription(data.description);
-    setMarkdown(data.markdown);
-    setimageURL(data.imageUrl);
-  }, []);
-
-  // renders this until the useEffect has finished
-  if (isLoading) {
-    return <div> Loading ... </div>;
-  }
 
   let handleSubmit = async (e) => {
     e.preventDefault();
-    let updatedArticle = JSON.stringify({
-      title: title,
+    let newTestimonial = JSON.stringify({
+      rating: rating,
+      header: header,
       description: description,
-      markdown: markdown,
-      imageUrl: imageURL,
+      name: name,
     });
-    console.log("updated article: ");
-    console.log(updatedArticle);
+    console.log(newTestimonial);
     const requestOptions = {
-      method: "PUT",
+      method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: updatedArticle,
+      body: newTestimonial,
     };
-    fetch(
-      `https://backendtesting1234.herokuapp.com/api/edit/${slug}`,
+    let res = await fetch(
+      "https://backendtesting1234.herokuapp.com/api/testimonials/",
       requestOptions
-    ).catch((error) => {
-      console.error("There was an error!", error);
-    });
+    );
+    if (res.status === 200) {
+    }
 
     //reset form
-    setTitle("");
+    setRating("");
+    setHeader("");
     setDescription("");
-    setMarkdown("");
-    setimageURL("");
+    setName("");
     console.log("success");
-    navigate(`/blogs/${slugify(title)}`);
+    navigate("/testimonials");
   };
 
   return (
@@ -84,18 +48,17 @@ export const EditForm = (props) => {
             onSubmit={handleSubmit}
             class="p-8 mt-6 mb-0 space-y-4 rounded-lg shadow-2xl"
           >
-            <p class="text-lg font-medium">Edit Article</p>
+            <p class="text-lg font-medium">Add New Testimonial</p>
 
             <div>
               <div class="relative mt-1">
                 <input
                   type="text"
-                  id="title"
+                  id="rating"
                   class="w-full p-4 pr-12 text-sm border-gray-200 rounded-lg shadow-sm"
-                  placeholder="Title"
-                  // value={title}
-                  defaultValue={data.title}
-                  onChange={(e) => setTitle(e.target.value)}
+                  placeholder="Rating"
+                  value={rating}
+                  onChange={(e) => setRating(e.target.value)}
                 />
 
                 <span class="absolute inset-y-0 inline-flex items-center right-4">
@@ -113,12 +76,11 @@ export const EditForm = (props) => {
               <div class="relative mt-1">
                 <input
                   type="text"
-                  id="description"
+                  id="header"
                   class="w-full p-4 pr-12 text-sm border-gray-200 rounded-lg shadow-sm"
-                  placeholder="Description"
-                  // value={description}
-                  defaultValue={data.description}
-                  onChange={(e) => setDescription(e.target.value)}
+                  placeholder="Header"
+                  value={header}
+                  onChange={(e) => setHeader(e.target.value)}
                 />
 
                 <span class="absolute inset-y-0 inline-flex items-center right-4">
@@ -142,12 +104,11 @@ export const EditForm = (props) => {
               <div class="relative mt-1">
                 <textarea
                   type="text"
-                  id="Markdown"
+                  id="description"
                   class="w-full p-4 pr-12 h-96 text-sm border-gray-200 rounded-lg shadow-sm"
-                  placeholder="Markdown"
-                  // value={markdown}
-                  defaultValue={data.markdown}
-                  onChange={(e) => setMarkdown(e.target.value)}
+                  placeholder="Description"
+                  value={description}
+                  onChange={(e) => setDescription(e.target.value)}
                 />
 
                 <span class="absolute inset-y-0 inline-flex items-center right-4">
@@ -165,12 +126,11 @@ export const EditForm = (props) => {
               <div class="relative mt-1">
                 <input
                   type="text"
-                  id="imageUrl"
+                  id="name"
                   class="w-full p-4 pr-12 text-sm border-gray-200 rounded-lg shadow-sm"
-                  placeholder="Image URL (https://source.unsplash.com/...)"
-                  // value={imageURL}
-                  defaultValue={data.imageUrl}
-                  onChange={(e) => setimageURL(e.target.value)}
+                  placeholder="Name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                 />
 
                 <span class="absolute inset-y-0 inline-flex items-center right-4">

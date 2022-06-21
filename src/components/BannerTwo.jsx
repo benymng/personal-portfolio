@@ -19,8 +19,8 @@ export const BannerTwo = () => {
             <h1 class="text-3xl font-extrabold sm:text-5xl">
               Infusion Energy
               <br></br>
-              <strong class="font-extrabold text-rose-700 sm:block">
-                Fuels From CO2
+              <strong class="font-extrabold text-accent-color sm:block">
+                Fuels From CO<sub>2</sub>
               </strong>
             </h1>
 
@@ -31,14 +31,14 @@ export const BannerTwo = () => {
 
             <div class="flex flex-wrap gap-4 mt-8 text-center">
               <a
-                class="block w-full px-12 py-3 text-sm font-medium text-white rounded shadow bg-rose-600 sm:w-auto active:bg-rose-500 hover:bg-rose-700 focus:outline-none focus:ring"
-                href="/get-started"
+                class="block w-full px-12 py-3 text-sm font-medium text-white rounded shadow bg-accent-color sm:w-auto active:bg-rose-500 hover:bg-hover-color focus:outline-none focus:ring"
+                href="/contact"
               >
-                Get Started
+                Contact
               </a>
 
               <a
-                class="block w-full px-12 py-3 text-sm font-medium bg-white rounded shadow text-rose-600 sm:w-auto hover:text-rose-700 active:text-rose-500 focus:outline-none focus:ring"
+                class="block w-full px-12 py-3 text-sm font-medium bg-white rounded shadow text-accent-color sm:w-auto hover:text-hover-color active:text-rose-500 focus:outline-none focus:ring"
                 href="/about"
               >
                 Learn More

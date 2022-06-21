@@ -15,6 +15,7 @@ import { BlogPage } from "./components/BlogPage";
 import { PageNotFound } from "./pages/PageNotFound";
 import { DeletePage } from "./pages/DeletePage";
 import { EditBlog } from "./pages/EditBlog";
+import { AddTestimonial } from "./pages/AddTestimonial";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Route path="/404" element={<PageNotFound />} />
           <Route path="/delete/:slug" element={<DeletePage />} />
           <Route path="/edit/:slug" element={<EditBlog />} />
+          <Route path="/add-testimonial" element={<AddTestimonial />} />
         </Routes>
       </Router>
       <Footer />
