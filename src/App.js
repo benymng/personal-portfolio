@@ -19,6 +19,7 @@ import { AddTestimonial } from "./pages/AddTestimonial";
 import { AdminLogin } from "./components/AdminLogin";
 import { Admin } from "./pages/Admin";
 import { AdminSignup } from "./components/AdminSignup";
+import { AboutPage } from "./pages/AboutPage";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
           <Route path="/add-testimonial" element={<AddTestimonial />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/admin-signup" element={<AdminSignup />} />
+          <Route path="/about" element={<AboutPage />} />
         </Routes>
       </Router>
       <Footer />

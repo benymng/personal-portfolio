@@ -25,8 +25,8 @@ export const BannerTwo = () => {
             </h1>
 
             <p class="max-w-lg mt-4 sm:leading-relaxed sm:text-xl">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt
-              illo tenetur fuga ducimus numquam ea!
+              Recycling effluent CO<sub>2</sub> into low-Carbon-Intensity (CI)
+              liquid fuel for a greener future.
             </p>
 
             <div class="flex flex-wrap gap-4 mt-8 text-center">
