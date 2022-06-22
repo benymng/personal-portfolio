@@ -17,7 +17,7 @@ export const AdminSignup = () => {
       passwordHash: hash,
     });
     console.log(newLogin);
-    fetch("http://localhost:3000/api/login", {
+    fetch("https://backendtesting1234.herokuapp.com/api/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: newLogin,
