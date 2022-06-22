@@ -12,7 +12,9 @@ export const AdminLogin = ({ setToken }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const fetchData = async () => {
-      const data = await fetch(`http://localhost:3000/api/admin/${name}`)
+      const data = await fetch(
+        `https://backendtesting1234.herokuapp.com/api/admin/${name}`
+      )
         .then((res) => res.json())
         .then((json) => setData(json));
     };
