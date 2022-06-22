@@ -56,7 +56,7 @@ export const AddTestimonialForm = () => {
                   type="text"
                   id="rating"
                   class="w-full p-4 pr-12 text-sm border-gray-200 rounded-lg shadow-sm"
-                  placeholder="Rating"
+                  placeholder="Rating (1-5)"
                   value={rating}
                   onChange={(e) => setRating(e.target.value)}
                 />

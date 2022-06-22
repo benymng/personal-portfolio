@@ -16,6 +16,9 @@ import { PageNotFound } from "./pages/PageNotFound";
 import { DeletePage } from "./pages/DeletePage";
 import { EditBlog } from "./pages/EditBlog";
 import { AddTestimonial } from "./pages/AddTestimonial";
+import { AdminLogin } from "./components/AdminLogin";
+import { Admin } from "./pages/Admin";
+import { AdminSignup } from "./components/AdminSignup";
 
 function App() {
   return (
@@ -29,10 +32,12 @@ function App() {
           <Route path="testimonials" element={<TestimonialsPage />} />
           <Route path="add-blog" element={<AddBlog />} />
           <Route path="/blogs/:slug" element={<BlogPage />} />
-          <Route path="/404" element={<PageNotFound />} />
+          <Route path="*" element={<PageNotFound />} />
           <Route path="/delete/:slug" element={<DeletePage />} />
           <Route path="/edit/:slug" element={<EditBlog />} />
           <Route path="/add-testimonial" element={<AddTestimonial />} />
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/admin-signup" element={<AdminSignup />} />
         </Routes>
       </Router>
       <Footer />

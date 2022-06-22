@@ -5,6 +5,9 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    minHeight: {
+      "1/2": "50%",
+    },
     extend: {
       colors: {
         "font-color": "#3a394a",

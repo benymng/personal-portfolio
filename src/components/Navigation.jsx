@@ -56,7 +56,7 @@ export const Navigation = () => {
               </a>
             </nav>
 
-            <div class="items-center ml-8 hidden md:block">
+            {/* <div class="items-center ml-8 hidden md:block">
               <div class="flex items-center border-gray-100 divide-x divide-gray-100 border-x">
                 <span>
                   <a
@@ -129,8 +129,8 @@ export const Navigation = () => {
                     <span class="sr-only"> Search </span>
                   </a>
                 </span>
-              </div>
-            </div>
+              </div> */}
+            {/* </div> */}
           </div>
         </div>
       </header>

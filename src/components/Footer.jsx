@@ -206,13 +206,13 @@ export const Footer = () => {
                     {" "}
                     Terms & Conditions{" "}
                   </a>
-                  <a class="hover:opacity-75" href="">
+                  <a class="hover:opacity-75" href="/admin-signup">
                     {" "}
-                    Returns Policy{" "}
+                    Admin Signup{" "}
                   </a>
-                  <a class="hover:opacity-75" href="">
+                  <a class="hover:opacity-75" href="/admin">
                     {" "}
-                    Accessibility{" "}
+                    Admin{" "}
                   </a>
                 </nav>
               </div>

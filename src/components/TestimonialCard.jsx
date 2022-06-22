@@ -16,7 +16,7 @@ export const TestimonialCard = (props) => {
         </svg>
       );
     }
-    return <div class="flex space-x-0.5 text-green-500">{stars}</div>;
+    return <div class="flex space-x-0.5 text-yellow-500">{stars}</div>;
   };
 
   return (
@@ -25,7 +25,7 @@ export const TestimonialCard = (props) => {
         {reviewStars(props.stars)}
 
         <div class="mt-4">
-          <h5 class="text-xl font-bold text-pink-600 sm:text-2xl">
+          <h5 class="text-xl font-bold text-font-color sm:text-2xl">
             {props.header}
           </h5>
 
