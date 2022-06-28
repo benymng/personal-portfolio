@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import { TestimonialCard } from "./TestimonialCard";
 
-export const Testimonials2 = () => {
+export const AdminTestimonials = () => {
   const [isLoading, setLoading] = useState(true);
   const serverLink =
     "https://backendtesting1234.herokuapp.com/api/testimonials";

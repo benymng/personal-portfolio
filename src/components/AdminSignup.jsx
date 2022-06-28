@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import bcrypt from "bcryptjs";
 import { useNavigate } from "react-router-dom";
+import { ReactSession } from "react-client-session";
+import { OnlyForAdmin } from "./OnlyForAdmin";
 
 export const AdminSignup = () => {
   const navigate = useNavigate();
@@ -25,6 +27,15 @@ export const AdminSignup = () => {
     console.log("success");
     navigate("/admin");
   };
+
+  const admin = ReactSession.get("admin");
+  if (admin !== "LoggedIn") {
+    return (
+      <div>
+        <OnlyForAdmin />
+      </div>
+    );
+  }
 
   return (
     <div>
