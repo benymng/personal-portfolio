@@ -1,12 +1,16 @@
 import React, { useState } from "react";
-import { AdminLogin } from "../components/AdminLogin";
+import AdminLogin from "../components/AdminLogin";
+import { ReactSession } from "react-client-session";
 
-export const Admin = () => {
-  const [token, setToken] = useState();
+const Admin = (props) => {
+  const admin = ReactSession.get("admin");
+  console.log(admin);
 
-  if (!token) {
-    return <AdminLogin setToken={setToken} />;
+  if (admin != "LoggedIn") {
+    return <AdminLogin />;
   }
 
-  return <div>Admin</div>;
+  return <div>admin</div>;
 };
+
+export default Admin;

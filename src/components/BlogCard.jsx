@@ -1,15 +1,20 @@
 import React from "react";
+import { useCallback } from "react";
 
 export const BlogCard = (props) => {
-  const blogLink =
-    `/blogs/${props.href}`
+  const handleOnLoad = useCallback(() => {
+    props.setImageCount(props.imageCount + 1);
+  }, []);
+
   return (
     <div>
-      <a
-        href={blogLink}
-        class="block overflow-hidden rounded-2xl"
-      >
-        <img class="object-cover w-full h-56" src={props.image} alt="" />
+      <a href={props.href} class="block overflow-hidden rounded-2xl">
+        <img
+          class="object-cover w-full h-56"
+          src={props.image}
+          alt=""
+          onLoad={handleOnLoad}
+        />
 
         <div class="p-4 bg-gray-900">
           <h5 class="text-sm text-white">{props.title}</h5>

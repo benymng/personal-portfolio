@@ -1,20 +1,23 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import bcrypt from "bcryptjs";
+import { ReactSession } from "react-client-session";
 
-export const AdminLogin = ({ setToken }) => {
+const AdminLogin = (props) => {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [data, setData] = useState();
 
   const saltRounds = 10;
 
+  function refreshPage() {
+    window.location.reload(false);
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const fetchData = async () => {
-      const data = await fetch(
-        `https://backendtesting1234.herokuapp.com/api/admin/${name}`
-      )
+      await fetch(`https://backendtesting1234.herokuapp.com/api/admin/${name}`)
         .then((res) => res.json())
         .then((json) => setData(json));
     };
@@ -25,8 +28,10 @@ export const AdminLogin = ({ setToken }) => {
     console.log(hash);
     console.log(data.passwordHash);
     if (bcrypt.compareSync(password, data.passwordHash)) {
-      setToken(true);
-      console.log("success");
+      ReactSession.set("admin", "LoggedIn");
+      const admin = ReactSession.get("admin");
+      console.log(admin);
+      refreshPage();
     }
   };
 
@@ -102,3 +107,4 @@ export const AdminLogin = ({ setToken }) => {
     </div>
   );
 };
+export default AdminLogin;

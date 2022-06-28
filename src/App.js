@@ -11,17 +11,19 @@ import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import TestimonialsPage from "./pages/TestimonialsPage";
 import { AddBlog } from "./pages/AddBlog";
-import { BlogPage } from "./components/BlogPage";
+import { AdminBlogPage } from "./components/AdminBlogPage";
 import { PageNotFound } from "./pages/PageNotFound";
 import { DeletePage } from "./pages/DeletePage";
 import { EditBlog } from "./pages/EditBlog";
 import { AddTestimonial } from "./pages/AddTestimonial";
-import { AdminLogin } from "./components/AdminLogin";
-import { Admin } from "./pages/Admin";
+import Admin from "./pages/Admin";
 import { AdminSignup } from "./components/AdminSignup";
 import { AboutPage } from "./pages/AboutPage";
+import { ReactSession } from "react-client-session";
+import { BlogPage } from "./components/BlogPage";
 
 function App() {
+  ReactSession.setStoreType("sessionStorage");
   return (
     <div>
       <Navigation />
@@ -32,6 +34,7 @@ function App() {
           <Route path="contact" element={<Contact />} />
           <Route path="testimonials" element={<TestimonialsPage />} />
           <Route path="add-blog" element={<AddBlog />} />
+          <Route path="/admin/blogs/:slug" element={<AdminBlogPage />} />
           <Route path="/blogs/:slug" element={<BlogPage />} />
           <Route path="*" element={<PageNotFound />} />
           <Route path="/delete/:slug" element={<DeletePage />} />

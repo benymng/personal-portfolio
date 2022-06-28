@@ -2,14 +2,17 @@ import React from "react";
 import { Testimonials } from "../components/Testimonials";
 import { Testimonials2 } from "../components/Testimonials2";
 import { TestimonialCard } from "../components/TestimonialCard";
-
-const TestimonialsPage = () => {
+import { withGlobalState } from "react-globally";
+import { ReactSession } from "react-client-session";
+const TestimonialsPage = (props) => {
+  const name = ReactSession.get("admin");
   return (
     <div>
       {/* <Testimonials /> */}
       <Testimonials2 />
+      {/* {props.globalState.admin} */}
     </div>
   );
 };
 
-export default TestimonialsPage;
+export default withGlobalState(TestimonialsPage);

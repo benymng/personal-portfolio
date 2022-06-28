@@ -1,8 +1,10 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { withGlobalState } from "react-globally";
 import { useNavigate, useParams } from "react-router-dom";
+import { ReactSession } from "react-client-session";
 
-export const EditForm = (props) => {
+const EditForm = (props) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [markdown, setMarkdown] = useState("");
@@ -39,8 +41,11 @@ export const EditForm = (props) => {
     setMarkdown(data.markdown);
     setimageURL(data.imageUrl);
   }, []);
+  const admin = ReactSession.get("admin");
+  if (admin !== "LoggedIn") {
+    return <div>Only Admins can see this page</div>;
+  }
 
-  // renders this until the useEffect has finished
   if (isLoading) {
     return <div> Loading ... </div>;
   }
@@ -196,3 +201,4 @@ export const EditForm = (props) => {
     </div>
   );
 };
+export default withGlobalState(EditForm);
