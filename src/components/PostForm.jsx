@@ -7,16 +7,18 @@ export const PostForm = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [markdown, setMarkdown] = useState("");
-  const [imageURL, setimageURL] = useState("https://source.unsplash.com/");
+  let [imageURL, setimageURL] = useState("");
   const navigate = useNavigate();
 
   let handleSubmit = async (e) => {
     e.preventDefault();
+    imageURL = imageURL.slice(0, -2);
+    console.log(imageURL);
     let newArticle = JSON.stringify({
       title: title,
       description: description,
       markdown: markdown,
-      imageUrl: imageURL,
+      imageUrl: imageURL + "10",
     });
     console.log(newArticle);
     const requestOptions = {

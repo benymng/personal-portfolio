@@ -3,7 +3,7 @@ import React from "react";
 export const AboutPage = () => {
   return (
     <div>
-      <section class="bg-white dark:bg-gray-900 my-20">
+      <section class="bg-white dark:bg-gray-900 ">
         <div class="container flex flex-col items-center px-4 py-12 mx-auto xl:flex-row">
           <div class="flex justify-center xl:w-1/2">
             <img
