@@ -20,20 +20,32 @@ export const TestimonialCard = (props) => {
   };
 
   return (
-    <blockquote class="flex flex-col justify-between h-full p-12 bg-white">
-      <div>
-        {reviewStars(props.stars)}
-
-        <div class="mt-4">
-          <h5 class="text-xl font-bold text-font-color sm:text-2xl">
-            {props.header}
-          </h5>
-
-          <p class="mt-4 text-gray-600">{props.description}</p>
+    <div>
+      <div class="card bg-base-100 h-full shadow-xl">
+        <div class="card-body">
+          {reviewStars(props.stars)}
+          <h2 class="card-title">{props.header}</h2>
+          <p>{props.description}</p>
+          <div class="card-actions justify-end">
+            <p>{props.name}</p>
+          </div>
         </div>
       </div>
+    </div>
+    // <blockquote class="flex flex-col justify-between h-full p-12 bg-white">
+    //   <div>
+    //     {reviewStars(props.stars)}
 
-      <footer class="mt-8 text-gray-500">{props.name}</footer>
-    </blockquote>
+    //     <div class="mt-4">
+    //       <h5 class="text-xl font-bold text-font-color sm:text-2xl">
+    //         {props.header}
+    //       </h5>
+
+    //       <p class="mt-4 text-gray-600">{props.description}</p>
+    //     </div>
+    //   </div>
+
+    //   <footer class="mt-8 text-gray-500">{props.name}</footer>
+    // </blockquote>
   );
 };

@@ -40,9 +40,9 @@ const Blogs = () => {
 
   return (
     <div>
-      <div class="max-w-screen-xl px-4 py-16 mx-auto lg:items-center lg:flex">
-        <div class="max-w-xl mx-auto text-center">
-          <div class="grid lg:grid-cols-2 sm:grid-cols-1 gap-8">
+      <div class="max-w-screen-xl px-4 py-16 mx-auto lg:items-center flex">
+        <div class="mx-auto text-center">
+          <div class="grid lg:grid-cols-2 sm:grid-cols-1 gap-10">
             {articles.map((article) => (
               <BlogCard
                 title={article.title}

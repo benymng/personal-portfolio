@@ -8,18 +8,17 @@ export const BlogCard = (props) => {
 
   return (
     <div>
-      <a href={props.href} class="block overflow-hidden rounded-2xl">
-        <img
-          class="object-cover w-full h-56"
-          src={props.image}
-          alt=""
-          onLoad={handleOnLoad}
-        />
-
-        <div class="p-4 bg-gray-900">
-          <h5 class="text-sm text-white">{props.title}</h5>
-          <h6 class="text-xs text-gray-500 mt-1">{props.date}</h6>
-          <p class="mt-1 text-xs text-gray-500">{props.description}</p>
+      <a href={props.href}>
+        <div class="card w-96 bg-base-100 shadow-xl">
+          <figure>
+            <img class="w-full h-72" src={props.image} onLoad={handleOnLoad} />
+          </figure>
+          <div class="card-body opacity-50">
+            <h2 class="card-title">{props.title}</h2>
+            <p>{props.description}</p>
+            <p>{props.date}</p>
+            <div class="card-actions justify-end"></div>
+          </div>
         </div>
       </a>
     </div>
