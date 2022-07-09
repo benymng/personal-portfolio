@@ -50,10 +50,10 @@ const AdminLogin = (props) => {
                 <input
                   type="text"
                   id="username"
-                  class="w-full p-4 pr-12 text-sm border-gray-200 rounded-lg shadow-sm"
                   placeholder="Username"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
+                  class="input w-full max-w-xl"
                 />
 
                 <span class="absolute inset-y-0 inline-flex items-center right-4">
@@ -72,10 +72,10 @@ const AdminLogin = (props) => {
                 <input
                   type="password"
                   id="password"
-                  class="w-full p-4 pr-12 text-sm border-gray-200 rounded-lg shadow-sm"
                   placeholder="Password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
+                  class="input w-full max-w-xl"
                 />
 
                 <span class="absolute inset-y-0 inline-flex items-center right-4">

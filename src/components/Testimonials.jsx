@@ -27,7 +27,7 @@ export const Testimonials = () => {
   }
   return (
     <div>
-      <section class="bg-gray-100">
+      <section class="">
         <div class="px-4 py-16 mx-auto max-w-screen-2xl sm:px-6 lg:px-8">
           <div class="items-end justify-between sm:flex">
             <div class="max-w-xl">
@@ -35,7 +35,7 @@ export const Testimonials = () => {
                 Read trusted reviews from our customers
               </h2>
 
-              <p class="max-w-lg mt-8 text-gray-500">
+              <p class="max-w-lg mt-8">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Aspernatur praesentium natus sapiente commodi. Aliquid sunt
                 tempore iste repellendus explicabo dignissimos placeat, autem

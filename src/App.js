@@ -21,6 +21,7 @@ import { AdminSignup } from "./components/AdminSignup";
 import { AboutPage } from "./pages/AboutPage";
 import { ReactSession } from "react-client-session";
 import { BlogPage } from "./components/BlogPage";
+import { Resume } from "./components/Resume";
 
 function App() {
   ReactSession.setStoreType("sessionStorage");
@@ -43,6 +44,7 @@ function App() {
           <Route path="/admin" element={<Admin />} />
           <Route path="/admin-signup" element={<AdminSignup />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/resume" element={<Resume />} />
         </Routes>
       </Router>
       <Footer />

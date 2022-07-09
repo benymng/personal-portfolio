@@ -9,7 +9,7 @@ export const BlogCard = (props) => {
   return (
     <div>
       <a href={props.href}>
-        <div class="card w-96 bg-base-100 shadow-xl">
+        <div class="card w-80 bg-base-100 shadow-xl">
           <figure>
             <img class="w-full h-72" src={props.image} onLoad={handleOnLoad} />
           </figure>
