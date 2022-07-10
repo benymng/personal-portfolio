@@ -9,9 +9,6 @@ export const Footer = () => {
           <a href="/admin" class="link link-hover">
             Admin
           </a>
-          <a class="link link-hover">Contact</a>
-          <a class="link link-hover">Jobs</a>
-          <a class="link link-hover">Press kit</a>
         </div>
         <div>
           <div class="grid grid-flow-col gap-4">
@@ -49,9 +46,6 @@ export const Footer = () => {
               </svg>
             </a>
           </div>
-        </div>
-        <div>
-          <p>Copyright © 2022 - All right reserved by ACME Industries Ltd</p>
         </div>
       </footer>
     </div>

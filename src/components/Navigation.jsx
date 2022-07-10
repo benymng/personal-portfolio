@@ -58,12 +58,12 @@ export const Navigation = () => {
                     <a href="/projects">Projects</a>
                   </li>
                   <li>
-                    <a href="/resume">Contact</a>
+                    <a href="/contact">Contact</a>
                   </li>
                 </ul>
               </li>
               <li>
-                <a>Testimonials</a>
+                <a href="/testimonials">Testimonials</a>
               </li>
             </ul>
           </div>

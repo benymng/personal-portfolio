@@ -11,13 +11,13 @@ export const Projects = () => {
               title="Captain Chef"
               description="Frontend: React, TailwindCSS, NextJS and Typescript."
               description2="Backend: Clarifai to identify the ingredients, Spoonacular API for finding recipes, and Google Mediapipe for hand gesture recognition. "
-              href="https://captain-chef.benng.tech/"
+              href="https://captain-chef.benjaminng.ca/"
               github="https://github.com/benymng/captain-chef"
             />
             <ProjectCard
               title="Infusion Energy"
               description="Full stack web app using MongoDB, ExpressJS, ReactJS and NodeJS stack with markdown blog functionality"
-              href="https://infusion-energy.benng.tech"
+              href="https://infusion-energy.benjaminng.ca"
               github="https://github.com/benymng/Infusion-Frontend"
             />
             <ProjectCard
