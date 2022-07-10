@@ -36,19 +36,31 @@ export const ContactForm = () => {
               </div>
             </div>
 
-            <div class="p-8 bg-white rounded-lg shadow-lg lg:p-12 lg:col-span-3">
+            <div class="p-8 rounded-lg shadow-2xl lg:p-12 lg:col-span-3">
               <form ref={form} onSubmit={handleOnSubmit} class="space-y-4">
                 <div>
                   <label class="sr-only" for="name">
                     Name
                   </label>
-                  <input
-                    class="w-full p-3 text-sm border-gray-200 rounded-lg"
-                    placeholder="Name"
-                    type="text"
-                    id="name"
-                    name="name"
-                  />
+                  <div>
+                    <div class="relative mt-1">
+                      <input
+                        type="text"
+                        id="Name"
+                        placeholder="Name"
+                        class="input w-full max-w-xl border-gray-500"
+                      />
+
+                      <span class="absolute inset-y-0 inline-flex items-center right-4">
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
+                        />
+                      </span>
+                    </div>
+                  </div>
                 </div>
 
                 <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -56,39 +68,55 @@ export const ContactForm = () => {
                     <label class="sr-only" for="email">
                       Email
                     </label>
-                    <input
-                      class="w-full p-3 text-sm border-gray-200 rounded-lg"
-                      placeholder="Email address"
-                      type="email"
-                      id="email"
-                      name="email"
-                    />
+
+                    <div class="relative mt-1">
+                      <input
+                        type="text"
+                        id="Email"
+                        placeholder="Email"
+                        class="input w-full max-w-xl border-gray-500"
+                      />
+
+                      <span class="absolute inset-y-0 inline-flex items-center right-4">
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
+                        />
+                      </span>
+                    </div>
                   </div>
 
                   <div>
                     <label class="sr-only" for="phone">
                       Phone
                     </label>
-                    <input
-                      class="w-full p-3 text-sm border-gray-200 rounded-lg"
-                      placeholder="Phone Number"
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                    />
+
+                    <div class="relative mt-1">
+                      <input
+                        type="tel"
+                        id="Phone Number"
+                        placeholder="Phone Number"
+                        class="input w-full max-w-xl border-gray-500"
+                      />
+
+                      <span class="absolute inset-y-0 inline-flex items-center right-4">
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
+                        />
+                      </span>
+                    </div>
                   </div>
                 </div>
 
                 <div>
-                  <label class="sr-only" for="message">
-                    Message
-                  </label>
                   <textarea
-                    class="w-full p-3 text-sm border-gray-200 rounded-lg"
+                    class="h-36 w-full p-3 textarea border-gray-500"
                     placeholder="Message"
-                    rows="8"
-                    id="message"
-                    name="message"
                   ></textarea>
                 </div>
 

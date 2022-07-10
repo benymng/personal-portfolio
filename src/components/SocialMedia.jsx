@@ -4,7 +4,7 @@ import { SocialIcon } from "react-social-icons";
 export const SocialMedia = () => {
   return (
     <div>
-      <div class="fixed left-0 top-1/4 z-50 px-5 py-8 bg-transparent flex flex-col space-y-3">
+      <div class="fixed left-0 top-1/4 z-50 px-5 py-8 bg-transparent bg flex flex-col space-y-3">
         <a href="#" title="Github">
           <SocialIcon url="https://github.com/benymng" />
         </a>
