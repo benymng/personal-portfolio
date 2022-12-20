@@ -32,6 +32,12 @@ export const Projects = () => {
               href="https://drive.google.com/file/d/1T_EUTfL4Vxr-2CFCptyMnkComfYJYBSz/view"
               github="https://github.com/stanleyjzheng/IOhackHackathon2020"
             />
+            <ProjectCard
+                title="4GAINS"
+                description="Fitness application which tracks the consistency of repetitions and the accceleration of gym exercises."
+                href="https://4fun.benjaminng.ca/"
+                github="https://github.com/benymng/4FUN"
+            />
           </div>
         </div>
       </div>

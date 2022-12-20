@@ -5,7 +5,7 @@ import { TestimonialCard } from "./TestimonialCard";
 export const Testimonials = () => {
   const [isLoading, setLoading] = useState(true);
   const serverLink =
-    "https://backendtesting1234.herokuapp.com/api/testimonials";
+    "https://backend-virid-zeta.vercel.app/api/testimonials";
   const [testimonials, setTestimonials] = useState([]);
   // when the second component is an empty that means that the fetch happens when you click the blog button
   // if you want to refetch with a button you should create a function that you can use onclick and useEffect

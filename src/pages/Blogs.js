@@ -7,7 +7,7 @@ import { ReactSession } from "react-client-session";
 
 const Blogs = () => {
   const [isLoading, setLoading] = useState(true);
-  const serverLink = "https://backendtesting1234.herokuapp.com/api/articles";
+  const serverLink = "https://backend-virid-zeta.vercel.app/portfolio/articles";
   const [articles, setArticles] = useState([]);
   const [imageCount, setImageCount] = useState(0);
   // when the second component is an empty that means that the fetch happens when you click the blog button

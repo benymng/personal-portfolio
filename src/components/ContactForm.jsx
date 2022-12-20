@@ -21,18 +21,11 @@ export const ContactForm = () => {
           <div class="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
             <div class="lg:py-12 lg:col-span-2">
               <p class="max-w-xl text-lg">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-                mollitia, molestiae quas vel sint commodi repudiandae
-                consequuntur voluptatum laborum numquam
+                Interested in connecting? Feel free to reach out!
               </p>
 
               <div class="mt-8">
-                <a href="" class="text-2xl font-bold text-pink-600">
-                  {" "}
-                  Phone Number{" "}
-                </a>
 
-                <address class="mt-2 not-italic">Contact Information</address>
               </div>
             </div>
 
@@ -125,7 +118,7 @@ export const ContactForm = () => {
                     type="submit"
                     class="inline-flex items-center justify-center w-full px-5 py-3 text-white bg-black rounded-lg sm:w-auto"
                   >
-                    <span class="font-medium"> Send Enquiry </span>
+                    <span class="font-medium">Send Email</span>
 
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

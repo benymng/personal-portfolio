@@ -11,7 +11,7 @@ export const BlogPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetch(
-        `https://backendtesting1234.herokuapp.com/api/${slug}`
+        `https://backend-virid-zeta.vercel.app/portfolio/articles/${slug}`
       )
         .then((res) => res.json())
         .then((json) => setData(json));
