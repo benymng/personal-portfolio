@@ -6,6 +6,7 @@ import { bounce, bounceInUp } from "react-animations";
 import Radium, { StyleRoot } from "radium";
 import styled, { keyframes } from "styled-components";
 import Typewriter from "typewriter-effect";
+import Test from "../assets/website-development.svg";
 
 export const BannerTwo = () => {
   const navigate = useNavigate();
@@ -23,6 +24,7 @@ export const BannerTwo = () => {
         <div class="hero-content text-center">
           <div class="max-w-md">
             <BounceInUp>
+              <img src={Test} />
               <h1 class="text-5xl font-bold">Hi, I'm Ben!</h1>
               <p class="py-6">
                 I'm a full stack developer studying software engineering at the

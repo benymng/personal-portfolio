@@ -1,4 +1,5 @@
 import React from "react";
+import Test from "../assets/website-development.svg";
 
 export const Banner2 = () => {
   return (
