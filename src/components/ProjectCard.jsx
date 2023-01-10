@@ -19,11 +19,11 @@ export const ProjectCard = (props) => {
     <div>
       <BounceInRight>
         <a href={props.href}>
-          <div class="card lg:card-side bg-base-100 shadow-xl h-full">
+          <div class="card lg:card-side bg-base-100 shadow-2xl h-full">
             <figure>
               <img
-                class="min-h-full h-96 w-80"
-                src="https://placeimg.com/400/400/arch"
+                class="min-h-full h-96 w-80 object-cover"
+                src={props.image}
                 alt="Album"
               />
             </figure>

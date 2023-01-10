@@ -16,7 +16,7 @@ export const AdminBlogPage = () => {
   };
 
   const deleteFunction = () => {
-    fetch(`https://backendtesting1234.herokuapp.com/api/articles/${slug}`, {
+    fetch(`https://backend-virid-zeta.vercel.app/portfolio/articles/${slug}`, {
       method: "DELETE",
     }).catch((error) => console.log(error));
     console.log("success");
@@ -26,7 +26,7 @@ export const AdminBlogPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetch(
-        `https://backendtesting1234.herokuapp.com/api/${slug}`
+        `https://backend-virid-zeta.vercel.app/portfolio/articles/${slug}`
       )
         .then((res) => res.json())
         .then((json) => setData(json));
@@ -71,7 +71,7 @@ export const AdminBlogPage = () => {
       </div>
       <div class="flex justify-center h-auto w-full">
         <div
-          class="lg:shadow-lg lg:w-1/3 lg:rounded sm:w-full lg:px-10 lg:py-10 mx-10 space-y-4 white"
+          class="lg:shadow-lg lg:w-2/3 lg:rounded sm:w-full lg:px-10 lg:py-10 mx-10 space-y-4 white"
           dangerouslySetInnerHTML={{ __html: data.sanitizedHtml }}
         ></div>
         {/* <h1>Test</h1> */}

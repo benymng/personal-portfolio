@@ -27,7 +27,7 @@ export const PostForm = () => {
       body: newArticle,
     };
     let res = await fetch(
-      "https://backendtesting1234.herokuapp.com/api/",
+      "https://backend-virid-zeta.vercel.app/portfolio/articles",
       requestOptions
     );
     if (res.status === 200) {

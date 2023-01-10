@@ -1,7 +1,7 @@
 import { Landing } from "./components/Landing";
 import { useState } from "react";
 import { PostForm } from "./components/PostForm";
-import { Banner } from "./components/Banner";
+
 import { Navigation } from "./components/Navigation";
 import { ContactForm } from "./components/ContactForm";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";

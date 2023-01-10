@@ -27,7 +27,7 @@ const EditForm = (props) => {
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetch(
-        `https://backendtesting1234.herokuapp.com/api/${slug}`
+        `https://backend-virid-zeta.vercel.app/portfolio/articles/${slug}`
       )
         .then((res) => res.json())
         .then((json) => setData(json));
@@ -66,7 +66,7 @@ const EditForm = (props) => {
       body: updatedArticle,
     };
     fetch(
-      `https://backendtesting1234.herokuapp.com/api/edit/${slug}`,
+      `https://backend-virid-zeta.vercel.app/portfolio/edit/${slug}`,
       requestOptions
     ).catch((error) => {
       console.error("There was an error!", error);

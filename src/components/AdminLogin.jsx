@@ -17,7 +17,7 @@ const AdminLogin = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const fetchData = async () => {
-      await fetch(`https://backendtesting1234.herokuapp.com/api/admin/${name}`)
+      await fetch(`https://backend-virid-zeta.vercel.app/api/admin/${name}`)
         .then((res) => res.json())
         .then((json) => setData(json));
     };
