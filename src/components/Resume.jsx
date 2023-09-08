@@ -4,7 +4,7 @@ import resume from "../assets/Resume.pdf";
 
 export const Resume = () => {
   return (
-    <div class="flex items-center justify-center h-screen">
+    <div class="flex items-center justify-center h-screen m-20">
       <Document file={resume}>
         <Page pageNumber={1} />
       </Document>

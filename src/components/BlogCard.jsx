@@ -13,8 +13,8 @@ export const BlogCard = (props) => {
           <figure>
             <img class="w-full h-72" src={props.image} onLoad={handleOnLoad} />
           </figure>
-          <div class="card-body opacity-50">
-            <h2 class="card-title">{props.title}</h2>
+          <div class="card-body opacity-75">
+            <h2 class="card-title text-blue-200">{props.title}</h2>
             <p>{props.description}</p>
             <p>{props.date}</p>
             <div class="card-actions justify-end"></div>

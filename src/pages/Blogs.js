@@ -39,7 +39,7 @@ const Blogs = () => {
   }
 
   return (
-    <div>
+    <div class="bg-base-200">
       <div class="max-w-screen-xl px-4 py-16 mx-auto lg:items-center flex">
         <div class="mx-auto text-center">
           <div class="grid lg:grid-cols-2 sm:grid-cols-1 gap-10">

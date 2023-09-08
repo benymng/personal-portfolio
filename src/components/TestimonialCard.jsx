@@ -21,7 +21,7 @@ export const TestimonialCard = (props) => {
 
   return (
     <div>
-      <div class="card bg-base-100 h-full shadow-xl">
+      <div class="card bg-base-200 h-full shadow-xl">
         <div class="card-body">
           {reviewStars(props.stars)}
           <h2 class="card-title">{props.header}</h2>

@@ -14,7 +14,7 @@ export const Navigation = () => {
   }
   return (
     <div>
-      <div class="navbar bg-base-100">
+      <div class="navbar bg-base-200">
         <div class="navbar-start">
           <div class="dropdown">
             <label tabindex="0" class="btn btn-ghost lg:hidden">
@@ -35,7 +35,7 @@ export const Navigation = () => {
             </label>
             <ul
               tabindex="0"
-              class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+              class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-200 rounded-box w-52"
             >
               <li>
                 <a href="/blogs">Blogs</a>
@@ -46,9 +46,9 @@ export const Navigation = () => {
               <li>
                 <a href="/contact">Contact</a>
               </li>
-              <li>
+              {/* <li>
                 <a href="/testimonials">Testimonials</a>
-              </li>
+              </li> */}
             </ul>
           </div>
           <a href="/" class="btn btn-ghost normal-case text-xl">
@@ -66,9 +66,9 @@ export const Navigation = () => {
             <li>
               <a href="/contact">Contact</a>
             </li>
-            <li>
+            {/* <li>
               <a href="/testimonials">Testimonials</a>
-            </li>
+            </li> */}
           </ul>
         </div>
         <div class="navbar-end">

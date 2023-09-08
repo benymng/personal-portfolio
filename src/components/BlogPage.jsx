@@ -20,14 +20,12 @@ export const BlogPage = () => {
     fetchData().catch(console.error);
   }, []);
 
-  console.log(data);
-
   if (isLoading) {
     return <div> Loading ... </div>;
   }
 
   return (
-    <div>
+    <div class="bg-base-200">
       <div class="flex justify-center h-auto">
         <div
           class="lg:shadow-lg lg:w-3/5 lg:rounded sm:w-full lg:px-10 lg:py-10 mx-10 space-y-4 white prose lg:prose-lg"

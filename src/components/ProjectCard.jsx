@@ -32,7 +32,7 @@ export const ProjectCard = (props) => {
               <p>{props.description}</p>
               <p>{props.description2}</p>
               <div class="card-actions justify-end"></div>
-              <button class="btn btn-primary bg-blue-400">Visit Website</button>
+              <button class="btn btn-primary bg-blue-400 hover:bg-blue-500">Visit Website</button>
               <div class="mt-5">
                 <GitHubButton href={props.github}>Github</GitHubButton>
               </div>
